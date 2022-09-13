@@ -3,7 +3,7 @@
 
 class matrix{
     private:
-        double* **arrMatrix;
+        double **arrMatrix;
     public:
         matrix();
         matrix(int, int);
