@@ -4,7 +4,7 @@
 struct matrixStruct{
     int n,m;
     double** matrixs;
-}
+};
 typedef matrixStruct matrix;
 
 class matrixClass{
