@@ -1,17 +1,23 @@
 #ifndef TCPCLIENTDBMANAGER
 #define TCPCLIENTDBMANAGER
 
-class matrix{
+struct matrixStruct{
+    int n,m;
+    double** matrixs;
+}
+typedef matrixStruct matrix;
+
+class matrixClass{
     private:
-        double **arrMatrix;
+        matrix matrixC;
     public:
-        matrix();
-        matrix(int, int);
-        ~matrix();
-        matrix* getMatrix();
-        matrix* lowerDiag(matrix*);
-        matrix* upperDiag(matrix*);
-        matrix* matrixDiag(matrix*);
+        matrixClass();
+        matrixClass(int, int);
+        ~matrixClass();
+        matrix getMatrix();
+        matrix lowerDiag(matrix);
+        matrix upperDiag(matrix);
+        matrix matrixDiag(matrix);
 
 };
 
