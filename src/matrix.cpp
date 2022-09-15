@@ -83,5 +83,15 @@ matrix matrixClass::susMatrix(matrix a, matrix b){
 }
 
 matrix matrixClass::prodMatrix(matrix a, matrix b){
-
+    matrix aux = matrixClass::matrixConstruct(a.n, b.m);
+    if(a.m == b.n){
+        for(int k = 0; k < a.n ;  k++){
+            for(int j=0; j < b.m; j++){
+                for(int i = 0; i < b.n; i++){
+                    aux.matrixs[k][j] = aux.matrixs[k][j] + a.matrixs[k][i] * b.matrixs[i][j];
+                }
+            }
+        }
+    }
+    return aux;
 }
