@@ -12,12 +12,15 @@ class matrixClass{
         matrix matrixC;
     public:
         matrixClass();
-        matrixClass(int, int);
+        void matrixClassC(int, int);
         ~matrixClass();
         matrix getMatrix();
         matrix lowerDiag(matrix);
         matrix upperDiag(matrix);
         matrix matrixDiag(matrix);
+        matrix sumMatrix(matrix, matrix);
+        matrix prodMatrix(matrix, matrix);
+        matrix susMatrix(matrix, matrix);
 
 };
 
