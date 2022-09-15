@@ -28,12 +28,22 @@ matrix matrixClass::lowerDiag(matrix ma){
     return ma;
 }
 
-matrix matrixClass::upperDiag(matrix m){
-
-    return m;
+matrix matrixClass::upperDiag(matrix ma){
+    for(int i = 0; i < ma.n; i++){
+        for(int j = 0; j < i; i++){
+            ma.matrixs[i][j] = 0;
+        }
+    }
+    return ma;
 }
 
-matrix matrixClass::matrixDiag(matrix m){
-
-    return m;
+matrix matrixClass::matrixDiag(matrix ma){
+    for(int i = 0; i < ma.n; i++){
+        for(int j = 0; j < ma.n; i++){
+            if(i != j){
+                ma.matrixs[i][j] = 0;
+            }
+        }
+    }
+    return ma;
 }
