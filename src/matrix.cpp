@@ -58,10 +58,30 @@ matrix matrixClass::sumMatrix(matrix a, matrix b){
     return aux;
 }
 
-matrix matrixClass::prodMatrix(matrix a, matrix b){
-
+matrix matrixClass::hadamadProdMatrix(matrix a, matrix b){
+    matrix aux = matrixClass::matrixConstruct(a.n, a.m);
+    if(a.n == b.n && a.m == b.m){
+        for(int i=0; i < a.n; i++){
+            for(int j = 0; j < a.m; j++){
+                aux.matrixs[i][j] = a.matrixs[i][j] * b.matrixs[i][j];
+            }
+        }
+    }
+    return aux;
 }
 
 matrix matrixClass::susMatrix(matrix a, matrix b){
+    matrix aux = matrixClass::matrixConstruct(a.n, a.m);
+    if(a.n == b.n && a.m == b.m){
+        for(int i=0; i < a.n; i++){
+            for(int j = 0; j < a.m; j++){
+                aux.matrixs[i][j] = a.matrixs[i][j] - b.matrixs[i][j];
+            }
+        }
+    }
+    return aux;
+}
+
+matrix matrixClass::prodMatrix(matrix a, matrix b){
 
 }

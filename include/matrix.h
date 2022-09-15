@@ -17,6 +17,7 @@ class matrixClass{
         static matrix upperDiag(matrix);
         static matrix matrixDiag(matrix);
         static matrix sumMatrix(matrix, matrix);
+        static matrix hadamadProdMatrix(matrix, matrix);
         static matrix prodMatrix(matrix, matrix);
         static matrix susMatrix(matrix, matrix);
 
