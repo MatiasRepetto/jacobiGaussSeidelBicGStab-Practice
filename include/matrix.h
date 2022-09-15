@@ -9,18 +9,16 @@ typedef matrixStruct matrix;
 
 class matrixClass{
     private:
-        matrix matrixC;
     public:
         matrixClass();
-        void matrixClassC(int, int);
+        static matrix matrixConstruct(int, int);
         ~matrixClass();
-        matrix getMatrix();
-        matrix lowerDiag(matrix);
-        matrix upperDiag(matrix);
-        matrix matrixDiag(matrix);
-        matrix sumMatrix(matrix, matrix);
-        matrix prodMatrix(matrix, matrix);
-        matrix susMatrix(matrix, matrix);
+        static matrix lowerDiag(matrix);
+        static matrix upperDiag(matrix);
+        static matrix matrixDiag(matrix);
+        static matrix sumMatrix(matrix, matrix);
+        static matrix prodMatrix(matrix, matrix);
+        static matrix susMatrix(matrix, matrix);
 
 };
 

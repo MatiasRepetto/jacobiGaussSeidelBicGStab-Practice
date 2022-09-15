@@ -2,21 +2,19 @@
 
 matrixClass::matrixClass(){}
 
-void matrixClass::matrixClassC(int n, int m){
-    this->matrixC.n = n;
-    this->matrixC.m = m;
-    this->matrixC.matrixs = new double*[n];
+matrix matrixClass::matrixConstruct(int n, int m){
+    matrix a;
+    a.n = n;
+    a.m = m;
+    a.matrixs = new double*[n];
     for(int i = 0; i < n; i++){
-        this->matrixC.matrixs[i] = new double[m];
-    } 
+        a.matrixs[i] = new double[m];
+    }
+    return a;
 }
 
 matrixClass::~matrixClass(){
 
-}
-
-matrix matrixClass::getMatrix(){
-    return this->matrixC;
 }
 
 matrix matrixClass::lowerDiag(matrix ma){
@@ -49,16 +47,15 @@ matrix matrixClass::matrixDiag(matrix ma){
 }
 
 matrix matrixClass::sumMatrix(matrix a, matrix b){
-    matrixClass aux2 = matrixClass();
+    matrix aux = matrixClass::matrixConstruct(a.n, a.m);
     if(a.n == b.n && a.m == b.m){
-        aux2.matrixClassC(a.n, a.m);
         for(int i=0; i < a.n; i++){
             for(int j = 0; j < a.m; j++){
-                aux2.matrixC.matrixs[i][j] = a.matrixs[i][j] + b.matrixs[i][j];
+                aux.matrixs[i][j] = a.matrixs[i][j] + b.matrixs[i][j];
             }
         }
     }
-    return aux2.matrixC;
+    return aux;
 }
 
 matrix matrixClass::prodMatrix(matrix a, matrix b){
