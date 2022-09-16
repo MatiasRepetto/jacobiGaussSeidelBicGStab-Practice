@@ -10,7 +10,7 @@ typedef matrixStruct matrix;
 class matrixClass{
     private:
     public:
-        matrixClass();
+        matrixClass(); 
         static matrix matrixConstruct(int, int);
         ~matrixClass();
         static matrix lowerDiag(matrix);
@@ -20,7 +20,6 @@ class matrixClass{
         static matrix hadamadProdMatrix(matrix, matrix);
         static matrix prodMatrix(matrix, matrix);
         static matrix susMatrix(matrix, matrix);
-
 };
 
 
