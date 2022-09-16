@@ -95,3 +95,4 @@ matrix matrixClass::prodMatrix(matrix a, matrix b){
     }
     return aux;
 }
+
