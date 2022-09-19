@@ -1,6 +1,8 @@
 #ifndef TCPCLIENTDBMANAGER
 #define TCPCLIENTDBMANAGER
 
+#include <cmath>
+
 struct matrixStruct{
     int n,m;
     double** matrixs;
