@@ -16,4 +16,5 @@ matrix jacobi(matrix A, matrix b, double error, int iters){
         }
         k++;
     }
+    return X_j;
 }
